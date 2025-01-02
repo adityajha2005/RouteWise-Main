@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               Copyright ©2025 All rights reserved
             </p>
             <Link
-              href="https://getRoutewise.com" target="_blank"
+              href="" target="_blank"
               className="inline-block mt-4 text-sm border border-border-color-primary hover:border-border-color-primary/40 hover:text-foreground-hsl/90 hover:bg-background-primary/35 duration-200 cursor-pointer rounded text-foreground-hsl/80 px-2 py-1"
             >
               {/* <div className="flex gap-1 items-center">
