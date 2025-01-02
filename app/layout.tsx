@@ -6,7 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Get RoadMaps",
+  title: "Routewise",
   description: "Generate a roadmap for your project with AI",
 };
 

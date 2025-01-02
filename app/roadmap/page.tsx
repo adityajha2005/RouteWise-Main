@@ -129,7 +129,7 @@ export default function Roadmap() {
         <h1 className="text-center text-2xl mt-24 px-5">
           At this time,{" "}
           <span className="bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text tracking-tight text-transparent">
-            Get RoadMaps
+            Routewise
           </span>{" "}
           does not support mobile view. You can access on desktop. If there is
           any issues give feedback on GitHub.
@@ -145,12 +145,12 @@ export default function Roadmap() {
               <Link href={"/"} className="flex flex-row items-center gap-1">
                 <Image
                   src={"/icon.svg"}
-                  alt="Get RoadMaps"
+                  alt="Routewise"
                   width={40}
                   height={40}
                 />
                 <h1 className="hidden sm:block bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text text-2xl tracking-tight text-transparent font-bold">
-                  Get RoadMaps
+                  Routewise
                 </h1>
               </Link>
               <SignedIn>

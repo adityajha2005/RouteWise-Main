@@ -1,6 +1,6 @@
 import { HoverEffect } from "./ui/card-hover-effect";
 
-// Example card data for Get RoadMaps features
+// Example card data for Routewise features
 export const features = [
   {
     title: "Generative AI for Personalized Roadmaps",

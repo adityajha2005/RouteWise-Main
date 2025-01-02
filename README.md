@@ -1,4 +1,4 @@
-# Get RoadMaps
+# Routewise
 
 Empower Your Journey: Let AI Craft Your Roadmap. Personalized, Efficient, and Future-Forward.
 
@@ -16,7 +16,7 @@ Empower Your Journey: Let AI Craft Your Roadmap. Personalized, Efficient, and Fu
 
 ## Introduction
 
-Get RoadMaps is an AI-driven tool designed to help users create personalized roadmaps for their journeys. Whether you are planning a learning path, career development, or any other project, Get RoadMaps provides an intuitive interface to craft tailored roadmaps efficiently.
+Routewise is an AI-driven tool designed to help users create personalized roadmaps for their journeys. Whether you are planning a learning path, career development, or any other project, Routewise provides an intuitive interface to craft tailored roadmaps efficiently.
 
 ## Features
 
@@ -26,14 +26,14 @@ Get RoadMaps is an AI-driven tool designed to help users create personalized roa
 
 ## Getting Started
 
-To get started with Get RoadMaps, follow the instructions below to set up the project locally.
+To get started with Routewise, follow the instructions below to set up the project locally.
 
 ## Installation
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/.. .git
+   git clone https://github.com/adityajha2005/RouteWise-Main
    cd getroadmaps
    ```
 2. **Install dependencies:**
@@ -98,10 +98,10 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact
 
-Designed and developed by Habeeb Moosa.
+Designed and developed by Aditya Jha.
 
-- **Email:** adityajha2005dev@gmail.com
-- **GitHub:** [GitHub.com/adityajha2005](https://github.com/adityajha2005)
-- **LinkedIn:** [LinkedIn.com/adityajha2005](https://www.linkedin.com/in/adityajha2005)
+- **Email:** 2005akjha@gmail.com
+- **GitHub:** [https://github.com/adityajha2005]
+- **LinkedIn:** [https://www.linkedin.com/in/aditya-jha-654800280/]
 
-© 2024 Get RoadMaps. All rights reserved.
+© 2024 Routewise. All rights reserved.

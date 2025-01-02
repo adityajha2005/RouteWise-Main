@@ -27,12 +27,12 @@ export const Navbar = () => {
                     <Link href={"/"} className="flex flex-row items-center gap-1">
                         <Image
                             src={"/icon.svg"}
-                            alt="Get RoadMaps"
+                            alt="Routewise"
                             width={40}
                             height={40}
                         />
                         <h1 className="hidden sm:block bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text text-2xl tracking-tight text-transparent font-bold hover:scale-105 transition-transform">
-                            Get RoadMaps
+                            Routewise
                         </h1>
                     </Link>
 
