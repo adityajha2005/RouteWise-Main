@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255, 255, 255;
+    --foreground: 0, 0, 0;
+    --primary: 34, 197, 94;
+
+    --card: 0, 0, 100%;
+    --card-foreground: 222.2, 84%, 4.9%;
+
+    --popover: 0, 0, 100%;
+    --popover-foreground: 222.2, 84%, 4.9%;
+
+    --secondary: 210, 40%, 96.1%;
+    --secondary-foreground: 222.2, 47.4%, 11.2%;
+
+    --muted: 210, 40%, 96.1%;
+    --muted-foreground: 215.4, 16.3%, 46.9%;
+
+    --destructive: 0, 84.2%, 60.2%;
+    --destructive-foreground: 210, 40%, 98%;
+
+    --radius: 0.5rem;
+  }
+
+  [data-theme="dark"] {
+    --background: 24, 24, 27;
+    --foreground: 255, 255, 255;
+    --primary: 210, 40%, 98%;
+    --secondary: 217.2, 32.6%, 17.5%;
+    --muted: 217.2, 32.6%, 17.5%;
+    --destructive: 0, 62.8%, 30.6%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .custom-node {
+    @apply bg-yellow-500 border-amber-500 rounded-md;
+  }
+
+  .custom-edge {
+    stroke: #0099ff;
+    stroke-width: 2px;
+  }
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradientAnimation 2s linear infinite;
+}
+.bg-custom-color {
+  background-color: #f0f0f0;  /* Replace with the desired background color */
+}
