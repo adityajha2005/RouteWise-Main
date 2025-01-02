@@ -169,7 +169,6 @@ export default function Roadmap() {
                     heading={"No credits left"}
                     description={
                       "You have no credits left. Please contact the developer."
-                      
                     }
                   />
                 ) : roadmaps.length > 0 ? (
@@ -217,7 +216,7 @@ export default function Roadmap() {
               )}
             </div>
           </div>
-          <div className="w-80 h-full bg-black mb-5 rounded-lg flex flex-col p-2">
+          <div className="w-80 h-full bg-black text-white mb-5 rounded-lg flex flex-col p-2">
             <RoadmapSpaces
               roadmaps={roadmaps}
               createRoadmapSpace={createRoadmapSpace}
@@ -226,7 +225,7 @@ export default function Roadmap() {
               setRoadmapId={setRoadmapId}
             />
           </div>
-          <div className="w-80 h-14  bg-emerald-300 text-gray-900 dark:bg-gray-800 dark:text-gray-200 mb-5 p-5 rounded-lg flex justify-center items-center">
+          <div className="w-80 h-14  bg-white text-black dark:bg-white dark:text-black mb-5 p-5 rounded-lg flex justify-center items-center">
             <Subscription credits={credits} />
           </div>
         </aside>

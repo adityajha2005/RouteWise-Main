@@ -17,7 +17,7 @@ export const Subscription = ({ credits }: SubscriptionProps) => {
     return (
         <Dialog>
             <DialogTrigger  >
-                <p className="text-white text-center">Manage Subscription</p>
+                <p className="text-black text-center">Manage Subscription</p>
             </DialogTrigger>
             <DialogContent className="text-white bg-black">
                 <DialogHeader className="space-y-2 text-white">
