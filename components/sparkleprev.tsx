@@ -21,7 +21,7 @@ export function SparklesPreview() {
       <h1 className="flex flex-col items-center text-center mb-5">
       <AnimatedGradientText>
   <Link
-  href="https://github.com"
+  href="https://github.com/adityajha2005/RouteWise-Main"
   className="text-xl md:text-xl sm:text-xl font-semibold tracking-wide text-white cursor-pointer"
   >
     🐧 | Proudly Open Source
