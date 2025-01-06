@@ -22,6 +22,7 @@
     "@tsparticles/slim": "^3.7.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.7",
     "framer-motion": "^11.15.0",
     "html-to-image": "^1.11.11",
     "lucide-react": "^0.378.0",
