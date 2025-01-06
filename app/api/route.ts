@@ -118,8 +118,8 @@ export async function POST(req: Request) {
                 });
             } catch (error) {
                 console.error("Error parsing JSON:", error);
-                console.error("Error message:", error.message);
-                console.error("Error stack:", error.stack);
+                console.error("Error message:", (error as Error).message);
+                console.error("Error stack:", (error as Error).stack);
                 const responseBody = JSON.stringify({ error: "Invalid JSON response" });
                 console.log("Response Body:", responseBody);
                 return new Response(responseBody, {
@@ -139,8 +139,8 @@ export async function POST(req: Request) {
         }
     } catch (error) {
         console.error("Fetch error:", error);
-        console.error("Error message:", error.message);
-        console.error("Error stack:", error.stack);
+        console.error("Error message:", (error as Error).message);
+        console.error("Error stack:", (error as Error).stack);
         const responseBody = JSON.stringify({ error: "Error occurred during API request" });
         console.log("Response Body:", responseBody);
         return new Response(responseBody, {
