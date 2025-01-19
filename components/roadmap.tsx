@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useMemo } from 'react';
 import ReactFlow, {
     addEdge,
     Connection,
@@ -10,7 +10,8 @@ import ReactFlow, {
     Background,
     BackgroundVariant,
     ControlButton,
-    MiniMap
+    MiniMap,
+    Node
 } from 'reactflow';
     
 import 'reactflow/dist/style.css';
@@ -26,7 +27,50 @@ interface RoadMapProps {
     setEdges: any;
 }
 
+// Custom node component
+const CustomNode = ({ data }: { data: any }) => {
+    return (
+        <div className="p-4 rounded-lg shadow-md">
+            <h3 className="font-bold text-lg mb-2">{data.label}</h3>
+            <p className="text-sm mb-2">{data.description}</p>
+            {data.difficulty && (
+                <span className={`text-xs px-2 py-1 rounded ${
+                    data.difficulty === 'beginner' ? 'bg-blue-100 text-blue-800' :
+                    data.difficulty === 'intermediate' ? 'bg-orange-100 text-orange-800' :
+                    'bg-red-100 text-red-800'
+                }`}>
+                    {data.difficulty}
+                </span>
+            )}
+            {data.estimatedHours && (
+                <div className="text-xs mt-2">
+                    Estimated time: {data.estimatedHours}h
+                </div>
+            )}
+            {data.resources && data.resources.length > 0 && (
+                <div className="mt-2">
+                    <h4 className="text-sm font-semibold">Resources:</h4>
+                    <ul className="text-xs">
+                        {data.resources.map((resource: any, index: number) => (
+                            <li key={index}>
+                                <a href={resource.url} 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   className="text-blue-500 hover:underline">
+                                    {resource.title}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+        </div>
+    );
+};
 
+const nodeTypes = {
+    custom: CustomNode
+};
 
 export const RoadMap = ({
     nodes,
@@ -56,6 +100,8 @@ export const RoadMap = ({
                     onEdgesChange={onEdgesChange}
                     onConnect={onConnect}
                     proOptions={proOptions}
+                    nodeTypes={nodeTypes}
+                    fitView
                 >
                     <Controls className='p-1 flex flex-col items-center justify-center bg-slate-800 rounded-sm'>
                         <ControlButton>
@@ -66,9 +112,22 @@ export const RoadMap = ({
                         </ControlButton>
                     </Controls>
                     <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
-                    <div className='bg-red-50 p-1'>
-                        {showMap && <MiniMap />}
-                    </div>
+                    {showMap && (
+                        <MiniMap 
+                            nodeStrokeColor={(n) => {
+                                if (n.data?.difficulty === 'beginner') return '#74c0fc';
+                                if (n.data?.difficulty === 'intermediate') return '#ffa94d';
+                                if (n.data?.difficulty === 'advanced') return '#ff6b6b';
+                                return '#222';
+                            }}
+                            nodeColor={(n) => {
+                                if (n.data?.difficulty === 'beginner') return '#e7f5ff';
+                                if (n.data?.difficulty === 'intermediate') return '#fff4e6';
+                                if (n.data?.difficulty === 'advanced') return '#fff5f5';
+                                return '#fff';
+                            }}
+                        />
+                    )}
                 </ReactFlow>
             </ReactFlowProvider>
         </div>
